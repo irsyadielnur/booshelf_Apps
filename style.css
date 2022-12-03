@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(245, 243, 255);
+}
+
+body,
+input,
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input,
+button {
+  font-size: 17px;
+}
+
+.head_bar {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(29, 68, 141);
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.input_section,
+.search_section,
+.book_shelf {
+  background-color: white;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgb(189, 189, 189);
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: rgb(45, 98, 196);
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: rgb(45, 98, 196);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 7px rgb(184, 172, 212);
+}
+
+.input_section > form > .input > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: rgb(45, 98, 196);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.book_shelf {
+  margin: 20px 0 0 0;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgb(189, 189, 189);
+}
+
+.book_shelf > h2 {
+  color: rgb(45, 98, 196);
+}
+
+.book_list h3 {
+  font-size: 16px;
+}
+
+.book_list p {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+div.action {
+  display: flex;
+  border: none;
+  margin: 7px 0;
+  padding: 10px 0 10px 10px;
+  box-shadow: 1px 1px 7px rgb(189, 189, 189);
+  border-radius: 10px;
+}
+
+.check-button {
+  width: 30px;
+  height: 30px;
+  background: url('assets/check_circle_outline_black_24dp.svg');
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  margin: 15px 15px 0 auto;
+  transition: 0.3s;
+}
+
+.check-button:hover {
+  background: url('assets/check_circle_black_24dp.svg');
+  background-size: contain;
+  transition: 0.3s;
+}
+
+.trash-button {
+  width: 30px;
+  height: 30px;
+  background: url('assets/delete_outline_black_24dp.svg');
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  margin: 15px 15px 0 0;
+  transition: 0.3s;
+}
+
+.trash-button:hover {
+  background: url('assets/delete_black_24dp.svg');
+  background-size: contain;
+  transition: 0.3s;
+}
+
+.undo-button {
+  width: 30px;
+  height: 30px;
+  background: url('assets/undo_black_24dp.svg');
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  margin: 15px 15px 0 auto;
+  transition: 0.3s;
+}
+
+.undo-button:hover {
+  background: url('assets/restore_black_24dp.svg');
+  background-size: contain;
+  transition: 0.3s;
+}
