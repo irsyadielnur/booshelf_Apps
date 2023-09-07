@@ -156,7 +156,19 @@ function removeBookFromCompleted(bookId) {
 
   books.splice(bookTarget, 1);
   document.dispatchEvent(new Event(RENDER_EVENT));
-  alert('Apakah anda yakin untuk menghapus buku ini?');
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+    }
+  });
   saveData();
 }
 
@@ -195,3 +207,17 @@ function loadDataFromStorage() {
 
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
+
+document.getElementById('searchBook').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const searchBook = document.getElementById('searchBookTitle').value.toLowerCase();
+  const bookList = document.querySelectorAll('.book_list h3');
+  for (const buku of bookList) {
+    if (buku.innerText.toLowerCase().includes(searchBook)) {
+      buku.parentElement.parentElement.style.display = 'block';
+    } else {
+      buku.parentElement.parentElement.style.display = 'none';
+    }
+  }
+});

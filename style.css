@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: rgb(245, 243, 255);
+  background-image: url(assets/bg-img.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body,
@@ -24,15 +26,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(29, 68, 141);
+  background-color: rgb(230, 146, 67);
   color: white;
 }
 
 main {
-  max-width: 800px;
-  width: 80%;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 16px;
+  padding: 2rem;
 }
 
 .input_section,
@@ -44,26 +45,27 @@ main {
 .input_section {
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  border: 1px solid rgb(231, 231, 231);
-  border-radius: 10px;
+  padding: 1rem;
+  border: 0.5px solid rgb(231, 231, 231);
+  border-radius: 20px;
   box-shadow: 1px 1px 15px rgb(189, 189, 189);
 }
 
 .input_section > h2 {
   text-align: center;
-  color: rgb(45, 98, 196);
+  color: rgb(199, 115, 37);
 }
 
 .input_section > form > .input {
-  margin: 8px 0;
+  margin: 1rem 0;
+  text-indent: 5px;
 }
 
 .input_section > form > button {
-  background-color: rgb(45, 98, 196);
+  background-color: rgb(230, 146, 67);
   color: white;
   border: 0;
-  border-radius: 5px;
+  border-radius: 20px;
   display: block;
   width: 100%;
   padding: 8px;
@@ -77,14 +79,15 @@ main {
 .input_section > form > .input > input {
   display: block;
   width: 100%;
-  padding: 8px;
-  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 2px 0;
+  border-radius: 5px;
   border: none;
-  box-shadow: 1px 1px 7px rgb(184, 172, 212);
+  background-color: rgb(255, 217, 179);
 }
 
 .input_section > form > .input > label {
-  color: cornflowerblue;
+  color: rgb(199, 115, 37);
   font-weight: bold;
 }
 
@@ -95,31 +98,79 @@ main {
 }
 
 .input_section > form > .input_inline > label {
-  color: rgb(45, 98, 196);
+  color: rgb(199, 115, 37);
   font-weight: bold;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.input_section > form > .input_inline > input {
+  cursor: pointer;
+}
+
+.search_section {
+  padding: 1rem;
+  margin-top: 20px;
+  border: 0.5px solid rgb(231, 231, 231);
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px rgb(189, 189, 189);
+}
+
+.search_section > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search_section > form > input {
+  width: 90%;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 217, 179);
+}
+
+.search_section > form > button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-image: url(assets/search.png);
+  cursor: pointer;
+  background-size: contain;
+  border: none;
+  transition: 0.5s;
+}
+
+.search_section > form > button:hover {
+  transition: 0.5s;
+  transform: rotate(360deg);
 }
 
 .book_shelf {
-  margin: 20px 0 0 0;
-  padding: 16px;
+  margin: 20px 0;
+  padding: 10px;
   border-radius: 10px;
-  border: 1px solid rgb(231, 231, 231);
-  border-radius: 10px;
+  border: 0 solid rgb(231, 231, 231);
+  border-radius: 20px;
   box-shadow: 1px 1px 15px rgb(189, 189, 189);
 }
 
 .book_shelf > h2 {
-  color: rgb(45, 98, 196);
+  color: rgb(199, 115, 37);
+  text-indent: 10px;
 }
 
 .book_list h3 {
   font-size: 16px;
+  color: rgb(129, 73, 20);
 }
 
 .book_list p {
   font-weight: bold;
   font-size: 13px;
+  color: rgb(129, 73, 20);
 }
 
 div.action {
@@ -134,7 +185,7 @@ div.action {
 .check-button {
   width: 30px;
   height: 30px;
-  background: url('assets/check_circle_outline_black_24dp.svg');
+  background: url('assets/check.png');
   background-size: contain;
   margin-left: auto;
   cursor: pointer;
@@ -144,15 +195,16 @@ div.action {
 }
 
 .check-button:hover {
-  background: url('assets/check_circle_black_24dp.svg');
+  background: url('assets/tick.png');
   background-size: contain;
+  transform: rotate(360deg);
   transition: 0.3s;
 }
 
 .trash-button {
   width: 30px;
   height: 30px;
-  background: url('assets/delete_outline_black_24dp.svg');
+  background: url('assets/trash.png');
   background-size: contain;
   cursor: pointer;
   border: none;
@@ -161,15 +213,16 @@ div.action {
 }
 
 .trash-button:hover {
-  background: url('assets/delete_black_24dp.svg');
+  background: url('assets/trash02.png');
   background-size: contain;
+  transform: rotate(360deg);
   transition: 0.3s;
 }
 
 .undo-button {
   width: 30px;
   height: 30px;
-  background: url('assets/undo_black_24dp.svg');
+  background: url('assets/undo.png');
   background-size: contain;
   cursor: pointer;
   border: none;
@@ -178,7 +231,8 @@ div.action {
 }
 
 .undo-button:hover {
-  background: url('assets/restore_black_24dp.svg');
+  background: url('assets/undo-circular-arrow.png');
   background-size: contain;
+  transform: rotate(360deg);
   transition: 0.3s;
 }

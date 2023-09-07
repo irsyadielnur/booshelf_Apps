@@ -4,21 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Bookshelf Apps</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="head_bar">
-      <h1 class="head_bar__title">Bookshelf Apps</h1>
+      <h1 class="head_bar_title">Bookshelf Apps</h1>
     </header>
     <main>
       <section class="input_section">
-        <h2>Masukkan Buku Baru</h2>
+        <h2>BacaanKu</h2>
         <form id="inputBook">
           <div class="input">
-            <label for="inputBookTitle">Judul</label>
+            <label for="inputBookTitle">Judul Buku</label>
             <input id="inputBookTitle" type="text" required />
           </div>
           <div class="input">
@@ -37,6 +40,13 @@
         </form>
       </section>
 
+      <section class="search_section">
+        <form id="searchBook">
+          <input id="searchBookTitle" type="text" placeholder="Cari Buku..." />
+          <button id="searchSubmit" type="submit"></button>
+        </form>
+      </section>
+
       <section class="book_shelf">
         <h2>Belum selesai dibaca</h2>
         <div id="incompleteBookshelfList" class="book_list"></div>
@@ -49,5 +59,6 @@
     </main>
 
     <script src="main.js" type="text/javascript"></script>
+    <script src="dist/sweetalert2.all.min.js"></script>
   </body>
 </html>
